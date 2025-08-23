@@ -7,15 +7,16 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
     const addAmount = parseInt(document.getElementById('add-amount').value)
     const addPin = parseInt(document.getElementById('add-pin').value)
 
+    if (validPin !== addPin) {
+        alert("Wrong Pin");
+        return;
+    }
+
 
     const availableBalance = parseInt(document.getElementById("available-balance").innerText)
 
     if (accountNumber.length < 11) {
         alert("Please provide a valid Account Number");
-        return;
-    }
-    if (validPin !== addPin) {
-        alert("Wrong Pin");
         return;
     }
 
@@ -30,6 +31,11 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
 // cashout money feature
 document.getElementById('withdraw-btn').addEventListener("click", function(e){
     e.preventDefault();
+    const addPin = parseInt(document.getElementById('add-pin').value)
+    if (validPin !== addPin) {
+        alert("Wrong Pin");
+        return;
+    }
     const withdrawAmount = parseInt(document.getElementById("withdraw-amount").value)
     const availableBalance = parseInt(document.getElementById("available-balance").innerText)
     const updatedBalance = availableBalance - withdrawAmount;
@@ -44,6 +50,7 @@ document.getElementById('withdraw-btn').addEventListener("click", function(e){
         alert("Insufficient Balance");
         return;
     }
+    
 })
 
 // toogling feature
