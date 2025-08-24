@@ -29,7 +29,7 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
 
 
 // cashout money feature
-document.getElementById('withdraw-btn').addEventListener("click", function(e){
+document.getElementById('withdraw-btn').addEventListener("click", function (e) {
     e.preventDefault();
     const addPin = parseInt(document.getElementById('add-pin').value)
     if (validPin !== addPin) {
@@ -50,18 +50,32 @@ document.getElementById('withdraw-btn').addEventListener("click", function(e){
         alert("Insufficient Balance");
         return;
     }
-    
+
 })
 
 // toogling feature
 document.getElementById("add-button").addEventListener("click", function () {
     document.getElementById("cash-out-parent").style.display = "none"
+    document.getElementById("get-bonus-parent").style.display = "none"
+    document.getElementById("transfer-money-parent").style.display = "none"
+    document.getElementById("pay-bill-parent").style.display = "none"
     document.getElementById("add-money-parent").style.display = "block"
 })
 
 document.getElementById("cash-out-button").addEventListener("click", function () {
     document.getElementById("add-money-parent").style.display = "none"
+    document.getElementById("get-bonus-parent").style.display = "none"
+    document.getElementById("transfer-money-parent").style.display = "none"
+    document.getElementById("pay-bill-parent").style.display = "none"
     document.getElementById("cash-out-parent").style.display = "block"
+})
+
+document.getElementById("transfer-money-button").addEventListener("click", function () {
+    document.getElementById("add-money-parent").style.display = "none"
+    document.getElementById("get-bonus-parent").style.display = "none"
+    document.getElementById("pay-bill-parent").style.display = "none"
+    document.getElementById("cash-out-parent").style.display = "none"
+    document.getElementById("transfer-money-parent").style.display = "block"
 })
 
 
