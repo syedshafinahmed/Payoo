@@ -53,6 +53,47 @@ document.getElementById('withdraw-btn').addEventListener("click", function (e) {
 
 })
 
+
+// transfer money feature
+document.getElementById('transfer-btn').addEventListener("click", function (e) {
+    e.preventDefault();
+    
+
+
+    const transferAmount = parseInt(document.getElementById("transfer-amount").value)
+    const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+
+
+
+    const transferMoneyNumber = document.getElementById('transfer-money-number').value
+    if (transferMoneyNumber.length < 11) {
+        alert("Please provide a valid Account Number");
+        return;
+    }
+    if (transferAmount > availableBalance) {
+        alert("Insufficient Balance");
+        return;
+    }
+
+
+    // const valPin = "1234"; 
+    // const addPin = (document.getElementById('add-pin').value.trim())
+
+    // // if (valPin !== addPin) {
+    // //     alert("Wrong Pin");
+    // //     return;
+    // // }
+
+    alert("✅ Transfer Successful!");
+
+
+    // const addPin = parseInt(document.getElementById('add-pin').value)
+    // if(addPin !== validPin){
+    //     alert("Wrong Pin!");
+    //     return;
+    // }
+})
+
 // toogling feature
 document.getElementById("add-button").addEventListener("click", function () {
     document.getElementById("cash-out-parent").style.display = "none"
