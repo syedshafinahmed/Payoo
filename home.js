@@ -142,6 +142,17 @@ document.getElementById('transfer-btn').addEventListener("click", function (e) {
 })
 
 // toogling feature
+
+
+function handleToggle(id){
+    const forms = document.getElementsByClassName("form")
+    for (const form of forms){
+        form.style.display = "none"
+    }
+    document.getElementById(id).style.display = "block"
+}
+
+
 document.getElementById("add-button").addEventListener("click", function () {
     // document.getElementById("cash-out-parent").style.display = "none"
     // document.getElementById("get-bonus-parent").style.display = "none"
@@ -150,11 +161,13 @@ document.getElementById("add-button").addEventListener("click", function () {
     // document.getElementById("add-money-parent").style.display = "block"
 
 
-    const forms = this.getElementsByClassName("form")
-    for (const form of forms){
-        form.style.display = "none"
-    }
-    document.getElementById("add-money-parent").style.display = "block"
+    // const forms = this.getElementsByClassName("form")
+    // for (const form of forms){
+    //     form.style.display = "none"
+    // }
+    // document.getElementById("add-money-parent").style.display = "block"
+
+    handleToggle("add-money-parent")
 })
 
 document.getElementById("cash-out-button").addEventListener("click", function () {
@@ -162,11 +175,16 @@ document.getElementById("cash-out-button").addEventListener("click", function ()
     // document.getElementById("get-bonus-parent").style.display = "none"
     // document.getElementById("transfer-money-parent").style.display = "none"
     // document.getElementById("pay-bill-parent").style.display = "none"
-    const forms = document.getElementsByClassName("form")
-    for(const form of forms){
-        form.style.display = "none"
-    }
-    document.getElementById("cash-out-parent").style.display = "block"
+    
+    
+    
+    // const forms = document.getElementsByClassName("form")
+    // for(const form of forms){
+    //     form.style.display = "none"
+    // }
+    // document.getElementById("cash-out-parent").style.display = "block"
+
+    handleToggle("cash-out-parent")
 })
 
 document.getElementById("transfer-money-button").addEventListener("click", function () {
@@ -174,11 +192,15 @@ document.getElementById("transfer-money-button").addEventListener("click", funct
     // document.getElementById("get-bonus-parent").style.display = "none"
     // document.getElementById("pay-bill-parent").style.display = "none"
     // document.getElementById("cash-out-parent").style.display = "none"
-    const forms = document.getElementsByClassName("form")
-    for(const form of forms){
-        form.style.display = "none"
-    }
-    document.getElementById("transfer-money-parent").style.display = "block"
+    
+    
+    // const forms = document.getElementsByClassName("form")
+    // for(const form of forms){
+    //     form.style.display = "none"
+    // }
+    // document.getElementById("transfer-money-parent").style.display = "block"
+
+    handleToggle("transfer-money-parent")
 })
 
 document.getElementById("pay-bill-button").addEventListener("click", function () {
@@ -186,11 +208,15 @@ document.getElementById("pay-bill-button").addEventListener("click", function ()
     // document.getElementById("get-bonus-parent").style.display = "none"
     // document.getElementById("cash-out-parent").style.display = "none"
     // document.getElementById("transfer-money-parent").style.display = "none"
-    const forms = document.getElementsByClassName("form")
-    for(const form of forms){
-        form.style.display = "none"
-    }
-    document.getElementById("pay-bill-parent").style.display = "block"
+    
+    
+    // const forms = document.getElementsByClassName("form")
+    // for(const form of forms){
+    //     form.style.display = "none"
+    // }
+    // document.getElementById("pay-bill-parent").style.display = "block"
+
+    handleToggle("pay-bill-parent")
 })
 
 document.getElementById("get-bonus-button").addEventListener("click", function () {
@@ -198,11 +224,16 @@ document.getElementById("get-bonus-button").addEventListener("click", function (
     // document.getElementById("pay-bill-parent").style.display = "none"
     // document.getElementById("cash-out-parent").style.display = "none"
     // document.getElementById("transfer-money-parent").style.display = "none"
-    const forms = document.getElementsByClassName("form")
-    for(const form of forms){
-        form.style.display = "none"
-    }
-    document.getElementById("get-bonus-parent").style.display = "block"
+    
+    
+    
+    // const forms = document.getElementsByClassName("form")
+    // for(const form of forms){
+    //     form.style.display = "none"
+    // }
+    // document.getElementById("get-bonus-parent").style.display = "block"
+
+    handleToggle("get-bonus-parent")
 })
 
 
