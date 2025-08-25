@@ -168,6 +168,14 @@ document.getElementById("add-button").addEventListener("click", function () {
     // document.getElementById("add-money-parent").style.display = "block"
 
     handleToggle("add-money-parent")
+
+
+    // const formBtns = document.getElementsByClassName("form-btn")
+    // for(const btn of formBtns){
+    //     btn.classList.remove("border-[#0874f2]")
+    // }
+
+    // document.getElementById("add-button").classList.add("border-[#0874f2]")
 })
 
 document.getElementById("cash-out-button").addEventListener("click", function () {
