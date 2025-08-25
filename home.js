@@ -84,7 +84,7 @@ document.getElementById('transfer-btn').addEventListener("click", function (e) {
     // //     return;
     // // }
 
-    alert("✅ Transfer Successful!");
+    alert("Transfer Successful!");
 
 
     // const addPin = parseInt(document.getElementById('add-pin').value)
