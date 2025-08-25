@@ -24,6 +24,19 @@ function getInnerText(id){
 }
 
 
+// function setInnerText(){
+//     const availableBalanceElement = document.getElementById("available-balance")
+//     availableBalanceElement.innerText = value
+// }
+
+
+function setInnerText(id, value){
+    const element = document.getElementById(id);
+    element.innerText = value;
+}
+
+
+
 
 // add money feature
 document.getElementById("add-money-btn").addEventListener("click", function (e) {
@@ -48,7 +61,10 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
 
     const newAvailableBalance = availableBalance + addAmount
 
-    document.getElementById("available-balance").innerText = newAvailableBalance
+    // document.getElementById("available-balance").innerText = 
+    // setInnerText("newAvailableBalance")
+    // setInnerText(newAvailableBalance)
+    setInnerText("available-balance", newAvailableBalance);
 
 
 })
@@ -65,7 +81,12 @@ document.getElementById('withdraw-btn').addEventListener("click", function (e) {
     const withdrawAmount = getInputValueNumber("withdraw-amount")
     const availableBalance = getInnerText("available-balance")
     const updatedBalance = availableBalance - withdrawAmount;
-    document.getElementById("available-balance").innerText = updatedBalance;
+    // document.getElementById("available-balance").innerText = ;
+    // setInnerText(updatedBalance)
+    setInnerText("available-balance", updatedBalance);
+
+
+
 
     const agentNumber = getInputValue('agent-number')
     if (agentNumber.length < 11) {
