@@ -9,12 +9,19 @@ function getInputValueNumber(id){
 }
 
 
+function getInputValue(id){
+    const inputField = document.getElementById(id)
+    const inputFieldValue = inputField.value
+    return inputFieldValue
+}
+
+
 
 // add money feature
 document.getElementById("add-money-btn").addEventListener("click", function (e) {
     e.preventDefault();
-    const bank = document.getElementById('bank').value
-    const accountNumber =  document.getElementById('account-number').value
+    const bank = getInputValue('bank')
+    const accountNumber =  getInputValue("account-number")
     const addAmount = getInputValueNumber('add-amount')
     const addPin = getInputValueNumber('add-pin')
 
@@ -52,7 +59,7 @@ document.getElementById('withdraw-btn').addEventListener("click", function (e) {
     const updatedBalance = availableBalance - withdrawAmount;
     document.getElementById("available-balance").innerText = updatedBalance;
 
-    const agentNumber = document.getElementById('agent-number').value
+    const agentNumber = getInputValue('agent-number')
     if (agentNumber.length < 11) {
         alert("Please provide a valid Account Number");
         return;
