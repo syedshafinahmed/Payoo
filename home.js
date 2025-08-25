@@ -16,6 +16,14 @@ function getInputValue(id){
 }
 
 
+function getInnerText(id){
+    const element = document.getElementById(id)
+    const elementValue = element.innerText
+    const elementValueNumber = parseInt(elementValue)
+    return elementValueNumber
+}
+
+
 
 // add money feature
 document.getElementById("add-money-btn").addEventListener("click", function (e) {
@@ -31,7 +39,7 @@ document.getElementById("add-money-btn").addEventListener("click", function (e) 
     }
 
 
-    const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+    const availableBalance = getInnerText("available-balance")
 
     if (accountNumber.length < 11) {
         alert("Please provide a valid Account Number");
@@ -55,7 +63,7 @@ document.getElementById('withdraw-btn').addEventListener("click", function (e) {
     //     return;
     // }
     const withdrawAmount = getInputValueNumber("withdraw-amount")
-    const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+    const availableBalance = getInnerText("available-balance")
     const updatedBalance = availableBalance - withdrawAmount;
     document.getElementById("available-balance").innerText = updatedBalance;
 
@@ -78,8 +86,8 @@ document.getElementById('transfer-btn').addEventListener("click", function (e) {
     
 
 
-    const transferAmount = parseInt(document.getElementById("transfer-amount").value)
-    const availableBalance = parseInt(document.getElementById("available-balance").innerText)
+    const transferAmount = getInputValue("transfer-amount")
+    const availableBalance = getInnerText("available-balance")
 
 
 
